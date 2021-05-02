@@ -47,24 +47,25 @@ void hudControl(void)
     //2P GP&VS
     else if(g_playerCount == 2)
     {
+        GlobalHud[1]->timeX = 0x01E4;
         g_hudMapToggle = 0x0100;
         g_mapY = 0x0077;
-        if(g_courseID == 0x00){g_mapY = 0x0114;};
-        if(g_courseID == 0x01){g_mapY = 0x0113;g_mapG = 0x00AA; g_mapB = 0x0000;};
-        if(g_courseID == 0x02){g_mapY = 0x0119;};
-        if(g_courseID == 0x03){g_mapY = 0x0118;};
-        if(g_courseID == 0x04){g_mapY = 0x0113;};
-        if(g_courseID == 0x05){g_mapY = 0x0115;g_mapR = 0x0041; g_mapG = 0x0075; g_mapB = 0x0031;};
-        if(g_courseID == 0x06){g_mapY = 0x011F;};
-        if(g_courseID == 0x07){g_mapY = 0x0115;};
-        if(g_courseID == 0x08){g_mapY = 0x0125;};
-        if(g_courseID == 0x09){g_mapY = 0x011F;};
-        if(g_courseID == 0x0A){g_mapY = 0x0108;};
-        if(g_courseID == 0x0B){g_mapY = 0x0119;};
-        if(g_courseID == 0x0C){g_mapY = 0x0114;};
-        if(g_courseID == 0x0D){g_mapY = 0x0114;};
-        if(g_courseID == 0x0E){g_mapY = 0x011A;};
-        if(g_courseID == 0x12){g_mapY = 0x0112;};
+        if(g_courseID == 0x00){g_mapX = 0x0114;};
+        if(g_courseID == 0x01){g_mapX = 0x0113;g_mapG = 0x00AA; g_mapB = 0x0000;};
+        if(g_courseID == 0x02){g_mapX = 0x0119;};
+        if(g_courseID == 0x03){g_mapX = 0x0118;};
+        if(g_courseID == 0x04){g_mapX = 0x0113;};
+        if(g_courseID == 0x05){g_mapX = 0x0115;g_mapR = 0x0041; g_mapG = 0x0075; g_mapB = 0x0031;};
+        if(g_courseID == 0x06){g_mapX = 0x011F;};
+        if(g_courseID == 0x07){g_mapX = 0x0115;};
+        if(g_courseID == 0x08){g_mapX = 0x0125;};
+        if(g_courseID == 0x09){g_mapX = 0x011F;};
+        if(g_courseID == 0x0A){g_mapX = 0x0108;};
+        if(g_courseID == 0x0B){g_mapX = 0x0119;};
+        if(g_courseID == 0x0C){g_mapX = 0x0114;};
+        if(g_courseID == 0x0D){g_mapX = 0x0114;};
+        if(g_courseID == 0x0E){g_mapX = 0x011A;};
+        if(g_courseID == 0x12){g_mapX = 0x0112;};
     }
     //3P&4P VS
     else if(g_playerCount > 2)
