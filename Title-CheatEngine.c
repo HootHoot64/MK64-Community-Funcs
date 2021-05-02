@@ -7,7 +7,6 @@ void cheatEngine(void)
     //CHEAT ENGINE LIMITATIONS: NO A-/START BUTTON USAGE & NO CONSECUTIVE ANALOG DIRECTION INPUT. (+ flags usage since no libs)
     static int buttonCount = 0, cheatCount, cheatWrong;
     static int flag[8], safetyFlag = 0;
-    int i,j;
     unsigned int *analog = {0x800F6910};
 
     /*
