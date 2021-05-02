@@ -1,10 +1,15 @@
+/*INFOS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+LIMITATIONS: NO A-/START BUTTON USAGE,
+             NO CONSECUTIVE ANALOG DIRECTION INPUT, 
+             (flags used since no libs) */
+
 //GLOBAL VARS //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-int Cheat[10]; //max number of cheats
+char Cheat[10]; //max number of cheats
+char CheatsOn;
 
 //TITLE SCREEN FUNC ////////////////////////////////////////////////////////////////////////////////////////////////////////
 void cheatEngine(void)
 {       
-    //CHEAT ENGINE LIMITATIONS: NO A-/START BUTTON USAGE & NO CONSECUTIVE ANALOG DIRECTION INPUT. (+ flags usage since no libs)
     static int buttonCount = 0, cheatCount, cheatWrong;
     static int flag[8], safetyFlag = 0;
     unsigned int *analog = {0x800F6910};
@@ -188,6 +193,7 @@ void cheatEngine(void)
         //RESET WATCH
         if(cheatWrong == 0)
         {
+            CheatsOn = 1;
             cheatCount++;
             if(cheatCount == 1){playSound(0x29008057);}
             else if(cheatCount == 2){playSound(0x29008053);}
@@ -199,6 +205,9 @@ void cheatEngine(void)
 
 
 //IN-GAME FUNC ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//if(CheatsOn =1){activeCheats();};
+
 void activeCheats(void)
 {
     if(Cheat[0] == 1){;}; //put cheat actions here
